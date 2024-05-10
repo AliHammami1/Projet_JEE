@@ -10,7 +10,7 @@
 <!-- Dialecte pour MySQL 8.x -->
 <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 <!-- Activation de la génération automatique du schéma -->
-<property name="hibernate.hbm2ddl.auto">create</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
 <!-- Entités à scanner pour Hibernate -->
 <mapping class="modele.Client"/>
 <mapping class="modele.Livreur"/>
