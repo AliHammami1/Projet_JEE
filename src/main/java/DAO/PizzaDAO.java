@@ -1,16 +1,15 @@
 package DAO;
 
-<<<<<<< heni
-=======
+
 import java.util.List;
 
->>>>>>> main
+
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-<<<<<<< heni
+
 import modele.Pizza;
 
 
@@ -95,38 +94,5 @@ public class PizzaDAO {
 		}
 		return success;
 	}
-	
-	
 
-=======
-import modele.Client;
-import modele.Pizza;
-
-public class PizzaDAO {
-	private SessionFactory sessionFactory;
-	private Session session;
-	public PizzaDAO()
-	{
-		sessionFactory = util.HibernateUtil.getSessionFactory();
-		session= sessionFactory.openSession();
-	}
-	public void create(Pizza p)
-	{
-		Transaction tx=null;
-		
-		try {
-		tx = session.beginTransaction();
-		session.persist(p);
-		tx.commit();
-		}
-		catch (Exception e) { if (tx!=null) tx.rollback(); throw e; }
-	}
-	
-	public List<Pizza> getAll(){
-		Session session=sessionFactory.openSession();
-		List<Pizza> results = session.createQuery("from Pizza",Pizza.class).getResultList();
-		session.close();
-		return results;
-	}
->>>>>>> main
 }
